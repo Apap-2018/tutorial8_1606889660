@@ -13,7 +13,6 @@
 
     <div class="container-fluid">
         <h2 th:Text=" 'Hello ' + ${#httpServletRequest.remoteUser} + ' !'"> Login as</h2>
-        <h3 th:text="${msg}"></h3>
         <div class="row">
 			<div class="col-md-6">
 				<div class="card">
@@ -24,12 +23,11 @@
 						<form th:action="@{/user/addUser}" method="post">
 							<div class="row form-group">
 								<label class="col-sm-4">User Name</label>
-								<input class="col-sm-8 form-control input-sm" type="text" required="required" name="username"/>
+								<input class="col-sm-8 form-control input-sm" type="text" name="username"/>
 							</div>
 							<div class="row form-group">
 								<label class="col-sm-4">Password</label>
-								<input class="col-sm-8 form-control input-sm" required="required" type="password" name="password"
-								pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}" title="password harus mengandung angka dan huruf serta minimal memiliki 8 karakter"/>
+								<input class="col-sm-8 form-control input-sm" type="password" name="password"/>
 							</div>
 							<div class="row form-group">
 								<label class="col-sm-4">Role :</label>
@@ -42,35 +40,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6">
-				<div class="card">
-					<div class="card-header">
-						Ubah password
-					</div>
-					<div class="card-body">
-						<form th:action="@{/user/updatePassword}" method="post">
-							<div class="row form-group">
-								<label class="col-sm-4">Password lama:</label>
-								<input class="col-sm-8 form-control input-sm" type="password" name="oldPassword"/>
-							</div>
-							<div class="row form-group">
-								<label class="col-sm-4">Password baru:</label>
-								<input class="col-sm-8 form-control input-sm" type="password" name="newPassword" required="required"
-								pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}" title="password harus mengandung angka dan huruf serta minimal memiliki 8 karakter"/>
-							</div>
-							<div class="row form-group">
-								<label class="col-sm-4">Konfirmasi password baru:</label>
-								<input class="col-sm-8 form-control input-sm" type="password" name="confirmNewPassword"/>
-							</div>
-							<div>
-								<button type="submit" class = "btn btn-primary">Simpan</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
 		</div>
-		
         <div class="row">
             <div class="col-md-6">
                 <div class="card">

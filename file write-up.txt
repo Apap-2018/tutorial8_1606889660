@@ -1,0 +1,10 @@
+Apa fungsi BCryptPasswordEncoder?
+= BCryptPasswordEncoder berfungsi untuk melakukan hashing pada password. 
+hashing tersebut digunakan agar dapat menjamin keamanan password user agar 
+tidak diketahui orang lain
+
+Apa yang dilakukan baris berikut? (Method pada kelas
+UserDetailsServiceImpl.java)
+= pada baris tersebut, spring menyimpan authoritas apa 
+saja yang didaftarkan secara unik, nama authoritas yang sudah 
+ada tidak akan ditambahkan lagi.
